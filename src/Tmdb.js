@@ -15,7 +15,7 @@
 
     
 const API_KEY = 'e6acf51435ffa655009deccafaeb855d';
-const API_BASE = 'https://api.themoviedb.org/3';
+const API_BASE = 'http://api.themoviedb.org/3';
 
 
 const basicFecth = async (endpoint) =>{
