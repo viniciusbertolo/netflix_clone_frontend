@@ -1,0 +1,71 @@
+.movieRow{
+    margin-bottom: 30px;
+}
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+}
+.movieRow--listarea{
+    /* tudo que passar da tela na horizontal vai ser cortado */
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movieRow--list{
+    transition: all ease 0.5s;
+}
+.movieRow--item{
+    /* um item fique ao lado do outro */
+    display: inline-block;
+    width:150px;
+    cursor: pointer;
+}
+.movieRow--item img{
+    /* a imagem vai ter 100% da area disponivel pra ela
+    que foi definido na div pai, ou seja 150px */
+    width: 100%;
+    /* o css dela vai diminuir para ficar 90% */
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+.movieRow--item img:hover{
+    transform: scale(1);
+}
+
+.movieRow--left,
+.movieRow--right{
+    position: absolute;
+    width:40px;
+    height:225px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* não deixa o espaço extra do icone ultrapassar a borda */
+    overflow: hidden;
+    cursor:pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+
+.movieRow--left{
+    left:0;
+}
+.movieRow--right{
+    right: 0;
+}
+
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1;
+}
+
+@media (max-width: 760px){
+
+    .movieRow--left,
+    .movieRow--right{
+        opacity: 1;
+    }
+
+}
